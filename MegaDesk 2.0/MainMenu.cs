@@ -53,17 +53,5 @@ namespace MegaDesk
         {
             Application.Exit();
         }
-
-        private void uploadButton_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Text files | *.txt"; // file types, that will be allowed to upload
-            dialog.Multiselect = false; // allow/deny user to upload more than one file at a time
-            if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
-            {
-                String path = dialog.FileName; // get name of file;
-                System.IO.File.Copy(path, "rushOrderPrices.txt", true);
-            }
-        }
     }
 }

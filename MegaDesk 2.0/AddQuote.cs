@@ -85,7 +85,12 @@ namespace MegaDesk
 
             decimal amount = drawerInput.Value * 50;
             drawerCost.Text = amount.ToString("N1");
-            ChangeValues();
+
+            if ((depthInput.Text != "" || depthInput.Text != String.Empty) && (widthInput.Text != "" || widthInput.Text != String.Empty))
+            {
+                ChangeValues();
+            }
+            
         }
 
 
